@@ -4,5 +4,5 @@ from principal.views import inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio, name="Club Deportivo Morichal"),
+    path('', inicio, name="iniciio"),
 ]
