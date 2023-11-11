@@ -2,178 +2,62 @@
 {% load static %}
 
 {% block contenido %}
-<!-- Inicia el main -->
-<main>
-    <div id="myCarousel" class="carousel slide h-75" data-bs-ride="carousel">
+<section class="carrusel">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" class="img-fluid">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static 'img/grupo1.jpg' %}"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>Ejemplo de encabezado.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la primera
-                            diapositiva del carrusel.
-                        </p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Regístrate hoy</a></p>
-                    </div>
-                </div>
+          <div class="carousel-item active">
+            <img src="{% static 'img/club/imagen1.jpg' %}" class="mx-auto d-block w-5 img-fluid">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Somos deportistas aportando al deporte</h5>
+              <p>Ven y conocenos te esperamos en Cali vive tu experiencia</p>
             </div>
-            <div class="carousel-item">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static 'img/grupo2.jpg' %}"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <div class="container">
-                    <div class="carousel-caption">
-                        <h1>Otro titular de ejemplo.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la segunda
-                            diapositiva del carrusel.
-                        </p>
-                        <p>
-                            <a class="btn btn-lg btn-primary" href="#">Más información</a>
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/club/imagen3.jpg' %}" class="mx-auto d-block w-5" alt="grupo_patinaje">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>grupo de ganadores</h5>
+              <p>Siempre estamos entre los mejores</p>
             </div>
-            <div class="carousel-item">
-                <img class="bd-placeholder-img" width="100%" height="100%" src="{% static '' %}"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                   
-            <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>Uno más por si acaso.</h1>
-                        <p>
-                            Algo de contenido placeholder representativo para la tercera
-                            diapositiva de este carrusel.
-                        </p>
-                        <p>
-                            <a class="btn btn-lg btn-primary" href="#">Explorar galería</a>
-                        </p>
-                    </div>
-                </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/club/imagen4.jpg' %}" class="mx-auto d-block w-20" alt="pista_patinaje">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Nuestras sedes</h5>
+              <p>tenemos Patinaje y Natacion</p>
             </div>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-    </div>
-
-    <div class="container marketing">
+      </div>
+</section>
+<section class="nosotros">
+    <h2 class="text-center">Quienes somos</h2>
+    <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
-                src="{% static 'img/familia1.jpg' %}" role="img" aria-label="Placeholder: 140x140"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                   
-                <h2>Encabezado</h2>
-                <p>
-                    Algo de contenidoplaceholder representativo para las tres columnas de
-                    texto debajo del carrusel. Esta es la primera columna.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
+            <div class="col-6 col-mod-6">
+                 <p><br>VISION<br>Obtener el mayor número de deportistas cada año pertenecientes a las selecciones Cali, Valle y Colombia y estos a su vez obtengan grandes logros para nuestro país y nuestra región.<br>                   
+                   La visión es un elemento básico como INDICADOR DE GESTIÓN para nuestra organización.
+                  Nuestro reto no solo es formar deportistas, sino niños y jóvenes, que aprendan a tener amor propio y fundamentalmente inculcar los valores como persona y un ciudadano útil para la sociedad.<br> <br>MISION<br> El club deportivo MORICHAL, se fundamenta en la formación básica de patinaje y el desarrollo humano integral. Nuestro mayor compromiso, es ser una escuela incluyente, donde nuestros niños, niñas y jóvenes del municipio desarrollen actividades con sentido lúdico, teniendo en cuenta el concepto individual y de conjunto, con énfasis en formación para la vida, que nos permita contar con deportistas elite de alto rendimiento y personas excepcionales.</p>       
             </div>
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
-                    src="{% static 'img/amigos.jpg' %}" role="img" aria-label="Placeholder: 140x140"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                <h2>Encabezado</h2>
-                <p>
-                    Otro fragmento emocionante de contenidoplaceholder representativo.
-                    Esta vez, pasamos a la segunda columna.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
-            </div>
-            <div class="col-lg-4">
-                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
-                    src="{% static 'img/pareja.jpg' %}" role="img" aria-label="Placeholder: 140x140"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                <h2>Encabezado</h2>
-                <p>
-                    Y, por último, esta, la tercera columna de contenidoplaceholder
-                    representativo.
-                </p>
-                <p><a class="btn btn-secondary" href="#">Ver detalles »</a></p>
+            <div class="col-6">
+                <video src="videos/VideoIniclal.mp4" autoplay loop muted poster="" class="img-fluid">
             </div>
         </div>
-
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">
-                    Encabezado del primer reportaje.
-                    <span class="text-muted">Te dejará boquiabierto.</span>
-                </h2>
-                <p class="lead">
-                    Excelente contenido de marcador de posición para el primer artículo
-                    aquí. Imagina algo de prosa emocionante aquí.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/paris.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                   
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">
-                    Oh, sí, es tan bueno. <span class="text-muted">Míralo tú mismo.</span>
-                </h2>
-                <p class="lead">
-                    ¿Otro reportaje? Por supuesto. Más contenido de marcador de posición
-                    aquí para darle una idea de cómo funcionaría este diseño con algún
-                    contenido del mundo real en su lugar.
-                </p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/mujer-caminando.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-            </div>
-        </div>
-        <hr class="featurette-divider" />
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">
-                    Y por último, este. <span class="text-muted">Jaque mate.</span>
-                </h2>
-                <p class="lead">
-                    Y sí, este es el último bloque de contenido de marcador de posición
-                    representativo. Una vez más, no está destinado a ser leído realmente,
-                    simplemente aquí para darle una mejor vista de cómo se vería esto con
-                    algún contenido real. Tu contenido.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" src="{% static 'img/familia2.jpg' %}" role="img" aria-label="Placeholder: 500x500"
-                    preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>Placeholder</title>
-                </div>
-        </div>
-        <hr class="featurette-divider" />
     </div>
-</main>
-<!-- Finaliza el main -->
+</section>           
+
 {% endblock contenido %}
 
 
