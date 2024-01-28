@@ -1,0 +1,9 @@
+{% extends 'partials/body.html' %}
+
+
+{% block contenido %}
+{% csrf_token %}
+<h1>Ususarios - Crear</h1>
+{{form}}
+
+{% endblock contenido %}

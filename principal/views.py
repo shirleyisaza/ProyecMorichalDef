@@ -13,3 +13,12 @@ def login(request):
         "titulo": titulo,
     }
     return render(request, 'login.html', context)
+
+
+def usuarios(request):
+    titulo = 'Usuario',
+        
+    context={
+    
+    }
+    return render(request= 'usuario/usuarios.html,contex')
