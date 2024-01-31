@@ -1,0 +1,23 @@
+{% extends 'partials/body.html' %}
+
+{% block contenido %}
+<h1>Usuarios</h1>
+<a class="btn-primary" href="{% url 'usuarios_crear' %}"></a>
+<table class="table"> 
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Documento</th>
+    </tr>
+    
+        
+        {% for usuario in usuarios  %}
+        <tr>
+           <td>{{usuario.nombre}}</td>
+           <td>{{usuario.apellido}}</td> 
+        <td>{{usuario.documento}}</td>
+    </tr>
+        {% endfor %}
+   
+</table>
+{% endblock contenido %}

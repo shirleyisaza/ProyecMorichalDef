@@ -1,0 +1,12 @@
+{% extends 'partials/body.html' %}
+
+
+{% block contenido %}
+<h1>Ususarios - Crear</h1>
+<form method="POST">
+    {% {% csrf_token %}
+    {{form}}
+    <imput class="btn btn-success" 
+    type="submit" value "registrar">
+</form>
+{% endblock contenido %}
