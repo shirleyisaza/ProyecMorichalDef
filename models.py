@@ -1,4 +1,4 @@
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext_lazy as _
 from django.db import models
 
 # Create your models here..
@@ -54,19 +54,19 @@ class Usuario(models.Model):
         class TipoDocumento(models.Model): 
             CC='C.C', _('Cedula de Ciudadania')
             RC='R.C', _('Registro Civil')
-            TI='T.I', _('Tarjeta de Identidad)'
-        tipoDocumento=models.CharField(max_length=4, Choices=TipoDocumento.Choices, default=tipoDocumento.CC,verbose_name='tipo de documento')
+            TI='T.I', _('Tarjeta de Identidad')
+        tipodocumento=models.CharField(max_length=4, Choices=TipoDocumento.Choices, default=TipoDocumento.CC,verbose_name='tipo de documento')
         documento=models.CharField(max_length=50, verbose_name='numero de documento')
         Telefono=models.CharField(max_length=20, verbose_name='Telefono')
         direccion=models.CharField(max_length=70, verbose_name='Documento')
         municipio=models.ForeignKey(Municipio,on_delate=models.CASCADE, verbose_name='Munnicipio')
-        fecha_nacimiento=models.DateField(verbose=name"fecha de nacimiento", help_text=u"MM/DD/AAAA")
+        fecha_nacimiento=models.DateField(verbose_name="fecha de nacimiento", help_text=u"MM/DD/AAAA")
         class Rol(models.Model): 
             administracion= 'Administrador', _('Administrador')
             Entrenador= 'Entrenador', _('Entrenador')
             Deportista= 'Deportista', _('Deportista')
-            rol=models.CharField(max_length=13, Choices=Rol.Choices, default=Rol.Deportista, verbose_name='Rol')
-            sucursal=models.CharField(sucursal, on_delate=models.CASCADE, verbose_name='sucursal')
+        rol=models.CharField(max_length=13, Choices=Rol.Choices, default=Rol.Deportista, verbose_name='Rol')
+        sucursal=models.CharField(Sucursal, on_delate=models.CASCADE, verbose_name='sucursal')
         class Estado(models.Model): 
             ACTIVO='1', _('Activo')
             INACTIVO='0', _('Inactivo')
