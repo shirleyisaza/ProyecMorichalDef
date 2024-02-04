@@ -1,3 +1,4 @@
+"HEAD"
 from django.shortcuts import redirect, render
 from usuarios.forms import UsuarioForm
 from usuarios.models import Usuario
@@ -11,14 +12,15 @@ def usuarios(request):
     cotext={
     
   "usuarios":usuarios 
-       
-    }
+ }
+
     return render(request,'usuarios/usuarios.html',context)
 
+    
 def usuarios_crear(request):
     
     if request.method == 'POST':
-        form = UsuarioForm(request.POST)
+        form= UsuarioForm(request.POST),
         if form.is_valid():
             form.save()
             print("El núero usuario se guardo correctamente")

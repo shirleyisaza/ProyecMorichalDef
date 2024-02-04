@@ -7,4 +7,4 @@ class UsuarioForm(forms.ModelForm):
        
         model = Usuario
        
-        fields = '__all__'
+fields = '__all__'
