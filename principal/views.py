@@ -21,4 +21,4 @@ def usuarios(request):
     context={
     
     }
-    return render(request= 'usuario/usuarios.html,contex')
+    return render(request= 'usuario/usuarios.html,context')

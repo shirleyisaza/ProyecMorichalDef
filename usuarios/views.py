@@ -1,37 +1,31 @@
-"HEAD"
 from django.shortcuts import redirect, render
-from usuarios.forms import UsuarioForm
-from usuarios.models import Usuario
+from usuarios.forms import Usuario, UsuarioForm
+
 
 # Create your views here.
 
 
 def usuarios(request):
+    
     usuarios= Usuario.objects.all()
     
-    cotext={
-    
-  "usuarios":usuarios 
- }
-
+    context={
+       "usuarios":usuarios 
+    }
     return render(request,'usuarios/usuarios.html',context)
 
-    
 def usuarios_crear(request):
     
     if request.method == 'POST':
         form= UsuarioForm(request.POST),
         if form.is_valid():
             form.save()
-            print("El núero usuario se guardo correctamente")
-            
+            print("El usuario se guardo correctamente")
             return redirect('usuarios')
         else:
-            print("El núero usuario no guardo")
+            print("El usuario no guardo")
     else:
-               
         form= UsuarioForm()
-                
     context={
         "form":form
     }
