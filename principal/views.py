@@ -8,7 +8,7 @@ def inicio(request):
     return render(request, 'index.html', context)
 
 def login(request):
-    titulo = "inicio de Sesion"
+    titulo = "Selecciona tu Rol"
     context={
         "titulo": titulo,
     }
