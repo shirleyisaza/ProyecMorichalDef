@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from programacion.models import Programacion
+
 
 # Create your models here.
 class Deportista(models.Model):
@@ -17,5 +19,25 @@ class Deportista(models.Model):
     class Estado(models.TextChoices):
         ACTIVO = '1', _('SI')
         INACTIVO = '0', _('NO')
+<<<<<<< HEAD
     estado = models.CharField(max_length=2, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado Activo?")
+=======
+    estado = models.CharField(max_length=2, choices=Estado.choices, default="Estado.ACTIVO", verbose_name="Estado Activo?")
+    
+    def __str__(self) -> str:
+        return self.genero
+    
+class Reporte_pago(models.Model):
+    mes_pago=models.CharField(max_length=255)
+    Reporte_pago=models.ImageField(upload_to='imagenes/')
+    
+    def __str__(self) -> str:
+        return self.mes_pago
+    
+class Deportista_programa(models.Model):
+    programacion= models.ForeignKey(Programacion, verbose_name="Programa",  on_delete=models.CASCADE)
+    
+    def __str__(self) -> str:
+        return self.Programacion
+>>>>>>> 6a3b04860083bc25c3522c9f9f08b2a63b204073
     
