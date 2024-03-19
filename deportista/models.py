@@ -17,5 +17,5 @@ class Deportista(models.Model):
     class Estado(models.TextChoices):
         ACTIVO = '1', _('SI')
         INACTIVO = '0', _('NO')
-    estado = models.CharField(max_length=2, choices=Estado.choices, default=Estado.SI, verbose_name="Estado Activo?")
+    estado = models.CharField(max_length=2, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado Activo?")
     
