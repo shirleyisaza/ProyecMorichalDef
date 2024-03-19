@@ -19,10 +19,9 @@ class Deportista(models.Model):
     class Estado(models.TextChoices):
         ACTIVO = '1', _('SI')
         INACTIVO = '0', _('NO')
-<<<<<<< HEAD
-    estado = models.CharField(max_length=2, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado Activo?")
-=======
-    estado = models.CharField(max_length=2, choices=Estado.choices, default="Estado.ACTIVO", verbose_name="Estado Activo?")
+
+
+    estado = models.CharField(max_length=2, choices=Estado.choices, default="Estado.ACTIVO", verbose_name="Estado Activo")
     
     def __str__(self) -> str:
         return self.genero
@@ -39,5 +38,5 @@ class Deportista_programa(models.Model):
     
     def __str__(self) -> str:
         return self.Programacion
->>>>>>> 6a3b04860083bc25c3522c9f9f08b2a63b204073
+
     
