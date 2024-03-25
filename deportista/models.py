@@ -19,3 +19,5 @@ class Deportista(models.Model):
         INACTIVO = '0', _('NO')
     estado = models.CharField(max_length=2, choices=Estado.choices, default=Estado.ACTIVO, verbose_name="Estado Activo?")
     
+    def __str__(self):
+        return self.genero
