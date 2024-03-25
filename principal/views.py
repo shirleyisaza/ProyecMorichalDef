@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from deportista.models import Deportista
 
 def inicio(request):
     titulo = "inicio"
