@@ -1,36 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 from django.db import models
 
-# Create your models here..
-
-class Empresa(models.Model):
-    nombre=models.TextField(max_length=80, verbose_name='Nombre Empresa')
-    nit=models.TextField(max_length=20, verbose_name='Nit Empresa')
-   
-    class Estado(models.Model): 
-            ACTIVO='1', _('Activo')
-            INACTIVO='0', _('Inactivo')
-    estado=models.CharField(max_length=1, Choices=Estado.Choices, default=Estado.Activo, verbose_name='Estado')
-    
-
-
-
-class Departamento(models.Model):
-    nombre=models.TextField(max_length=90, verbose_name='Nombre Departamento')
-    class Estado(models.Model): 
-            ACTIVO='1', _('Activo')
-            INACTIVO='0', _('Inactivo')
-    estado=models.CharField(max_length=1, Choices=Estado.Choices, default=Estado.Activo, verbose_name='Estado')
-            
-    
-class Municipio(models.Model):
-    nombre=models.TextField(max_length=90, verbose_name='Nombre Municipio')
-    departamento=models.ForeignKey(Departamento, on_delate=models.CASCADE, verbose_name='Departamento')
-class Estado(models.Model): 
-            ACTIVO='1', _('Activo')
-            INACTIVO='0', _('Inactivo')
-estado=models.CharField(max_length=1, Choices=Estado.Choices, default=Estado.Activo, verbose_name='Estado')
-           
     
 class Sucursal(models.Model):
     nombre=models.TextField(max_length=80, verbose_name='Nombre Sucursal')
@@ -57,10 +27,8 @@ class Usuario(models.Model):
             TI='T.I', _('Tarjeta de Identidad')
         tipodocumento=models.CharField(max_length=4, Choices=TipoDocumento.Choices, default=TipoDocumento.CC,verbose_name='tipo de documento')
         documento=models.CharField(max_length=50, verbose_name='numero de documento')
-        Telefono=models.CharField(max_length=20, verbose_name='Telefono')
-        direccion=models.CharField(max_length=70, verbose_name='Documento')
-        municipio=models.ForeignKey(Municipio,on_delate=models.CASCADE, verbose_name='Munnicipio')
-        fecha_nacimiento=models.DateField(verbose_name="fecha de nacimiento", help_text=u"MM/DD/AAAA")
+        Fecha_Registro=models.DateField(verbose_name="fecha de nacimiento", help_text=u"MM/DD/AAAA")
+       
         class Rol(models.Model): 
             administracion= 'Administrador', _('Administrador')
             Entrenador= 'Entrenador', _('Entrenador')
